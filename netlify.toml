@@ -1,12 +1,6 @@
-[[redirects]]
-  from = “/youtube/v3/search”
-  to = “https://www.googleapis.com"
-  status = 200
-[[redirects]]
-  from = “/youtube/v3/videos”
-  to = “https://youtube.googleapis.com”
-  status = 200
-[[redirects]]
-  from = “/complete”
-  to = “https://suggestqueries.google.com”
-  status = 200
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
+      Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+      Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept"
