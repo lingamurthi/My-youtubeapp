@@ -27,7 +27,6 @@ const VideoContainer = () => {
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEOS_API+process.env.REACT_APP_GOOGLE_API_KEY);
     const json = await data?.json();
- 
 
     if (Array.isArray(json?.items) && json.items.length > 0) {
       setVideos((prevVideos) => [...prevVideos, ...json.items]);
